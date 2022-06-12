@@ -1,5 +1,5 @@
 # Directone
 
-#[Link](https://directone1.netlify.app/)
+[# Link](https://directone1.netlify.app/)
 
-#this project made by bootstrap5
+# this project made by bootstrap5
