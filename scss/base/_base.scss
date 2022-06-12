@@ -1,0 +1,31 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+body {
+    overflow-x: hidden;
+    background-color:$secondary !important;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+*::-webkit-scrollbar {
+    width: .3rem;
+    border-radius: .4rem;
+    scroll-behavior: smooth !important;
+}
+     
+*::-webkit-scrollbar-track {
+    background-color:$white ;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color ;
+    border-radius: 10px;
+}

@@ -1,0 +1,116 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+// STYLE CONTACT INFORMATION SECTION
+.contact-us-container {
+    background-color: $dark-gray;
+    font-size:smaller;
+    padding:.475rem .5rem;
+
+    .col1,.col2 {
+        @include media-breakpoint-down(md) {
+            height:1.2rem;
+        };
+    }
+
+    .col1 {
+            p {
+                margin-right:50%;
+
+                @include media-breakpoint-down(md) {
+                    margin-right:0;
+                    float: left;
+                };
+    
+                .free-call {
+                    color:$primary;
+                }
+
+                .phone-number {
+                    color:$white;
+                }
+            }
+    }
+
+    .col2 {
+        ul {
+            display: inline;
+            margin-left:20%;
+    
+            @include media-breakpoint-down(md) {
+                margin-left:-1.6rem;
+                float: left;
+            };
+    
+            li {
+                display: inline;
+                margin-left:1rem;
+                position: relative;
+    
+                @include media-breakpoint-down(md) {
+                    margin-left:0;
+                    margin-right:.4rem;
+                };
+        
+                &::before {
+                    content:"";
+                    height:4px;
+                    width:4px;
+                    background-color: $gray;
+                    position: absolute;
+                    top:45%;
+                    left:-6px;
+                    border-radius: 60%;
+                }
+    
+                a {
+                    color:$gray;
+                    text-decoration: none;     
+                }
+                &:hover {
+                    a {
+                        color:$white;
+                    }
+                    &::before {
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+//STYLE HEADER SECTION
+.header {
+    height:48rem;
+    position: relative;
+    background-image: url('../../images/header-image-home.jpg') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    backdrop-filter: brightness(60%);
+
+    //STYLE BACKGROUND FILTER DIV
+    .bg-filter {
+        position: absolute;
+        height:100%;
+        width:100%;
+        background-color: rgba(0,0,0,0.4);
+        top:0;
+        z-index:-1;
+    }
+
+    // STYLE INTRO SECTION
+    .intro {
+        margin-left:auto;
+        margin-right: auto;
+        margin-top:4rem !important;
+
+        span {
+            color:$light-gray;
+            letter-spacing: 0
+        }
+    }
+    
+}
+

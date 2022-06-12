@@ -1,0 +1,66 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+.navbar {
+    height:7rem;
+    letter-spacing: 1px;
+
+    &-brand {
+        margin-left:6%;
+
+        @include media-breakpoint-down(lg) {
+            margin-left:1%;
+        };
+
+        h1,span {
+            letter-spacing:0;
+            position: relative;
+        }
+    
+        h1 {
+            font-size: 2rem;
+            top: .4rem;
+        }
+    
+        span {
+            text-transform:uppercase;
+            font-size:.7rem;
+            bottom: .7rem;
+        }
+    
+        i {
+           color: $primary;
+           font-size: 2.4rem;
+           margin-right:.2rem;
+        }
+    }
+    
+    &-collapse {
+
+        @include media-breakpoint-down(lg) {
+            background-color:$dark-gray;
+            padding:1rem;
+        };
+
+        .navbar-nav {
+            .nav-item {
+                padding:0 1.2rem;
+
+                .nav-link {
+                    color:$light-gray;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+
+                    &:hover,&:active {
+                        color:$white;
+                    }
+                }
+
+                .active {
+                    color:$white !important;
+                }
+            }
+        }
+        
+    }
+}

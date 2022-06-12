@@ -1,0 +1,21 @@
+{
+  "name": "directone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "autoprefixer": "^10.4.7",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.3",
+    "postcss-cli": "^9.1.0",
+    "sal.js": "^0.8.5",
+    "sass": "^1.52.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "sass --watch scss:assests/css"
+  },
+  "author": "",
+  "license": "ISC"
+}

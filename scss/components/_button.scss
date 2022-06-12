@@ -1,0 +1,32 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+.button {
+    padding:.4rem 1rem;
+    border:none;
+}
+
+.add-listing-btn {
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 90%;
+    background-color: $primary;
+    color:$white;
+}
+
+.search-btn {
+    width:100% !important;
+    height:100%;
+    background-color: $primary;
+    color:$white;
+}
+
+.show-speacial-offers-btn {
+    background-color: $dark-gray;
+    color:$white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    padding:1rem;
+    border-radius: .3rem;
+}
