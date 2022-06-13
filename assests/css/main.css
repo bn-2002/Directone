@@ -10109,6 +10109,12 @@ textarea.form-control-lg {
   font-size: 0.9rem;
 }
 
+.display-4--des {
+  color: #FF414D;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
 body {
   overflow-x: hidden;
   background-color: #F0F4F7 !important;
@@ -10483,7 +10489,7 @@ body {
 }
 
 .advertisement-section {
-  background-color: #FF414D;
+  background: repeating-linear-gradient(120deg, #FF414D 0px, #FF414D 10px, #F03943 10px, #F03943 20px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -10583,6 +10589,52 @@ body {
   z-index: -1;
   opacity: 0;
   transition: 0.5s ease all;
+}
+
+.welcome-post-section {
+  min-height: 50rem;
+  width: 100%;
+  padding: 0 !important;
+  background-color: #fff;
+}
+.welcome-post-section__image {
+  min-height: 50rem;
+  padding: 0 !important;
+  margin: 0;
+}
+.welcome-post-section__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+.welcome-post-section__des .container {
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .welcome-post-section__des .container {
+    height: 80%;
+    padding: 10px 5px;
+  }
+}
+.welcome-post-section__des .container p {
+  line-height: 2rem;
+  font-size: 1.1rem;
+  color: #999999;
+  text-align: justify;
+}
+.welcome-post-section__des .container .counter {
+  padding: 1rem;
+}
+.welcome-post-section__des .container .counter .wrapper {
+  background-color: #F7F7F7;
+  border-radius: 0.3rem;
+  height: 6.5rem !important;
+  padding: 0.2rem;
+}
+.welcome-post-section__des .container .counter .wrapper .number {
+  font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

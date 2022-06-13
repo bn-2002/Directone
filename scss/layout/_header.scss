@@ -67,17 +67,18 @@
                     color:$gray;
                     text-decoration: none;     
                 }
+
                 &:hover {
                     a {
                         color:$white;
                     }
+                    
                     &::before {
                         background-color: $primary;
                     }
                 }
             }
         }
-    
     }
 }
 
@@ -111,6 +112,5 @@
             letter-spacing: 0
         }
     }
-    
 }
 

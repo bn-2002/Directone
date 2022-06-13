@@ -1,0 +1,56 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+.welcome-post-section {
+    min-height:50rem;
+    width:100%;
+    padding:0 !important;
+    background-color:$white;
+
+    &__image {
+        min-height:50rem;
+        padding:0 !important;
+        margin:0;
+        
+        img {
+            height: 100%;
+            width:100%;
+            object-fit:cover;
+            padding:0;
+            margin:0;
+        }
+    }
+
+    &__des {
+        .container {
+            margin-top: 2rem;
+
+            @include media-breakpoint-up(md) {
+                height:80%;
+                padding:10px 5px;
+            };
+    
+            p {
+                line-height: 2rem;
+                font-size: 1.1rem;
+                color:$gray;
+                text-align: justify;
+            }
+
+            .counter {
+                padding:1rem;
+
+                .wrapper {
+                    background-color:$white-secondary;
+                    border-radius: .3rem;
+                    height:6.5rem !important;
+                    padding:.2rem;
+
+                    .number {
+                        font-size: 2.5rem;
+                    }    
+                }
+            }
+        }
+    }
+}
