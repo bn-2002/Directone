@@ -2,4 +2,4 @@
 
 [Link](https://directone1.netlify.app/)
 
-this project made by bootstrap5
+this project is made by bootstrap5 features.
