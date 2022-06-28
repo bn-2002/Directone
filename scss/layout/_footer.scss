@@ -1,0 +1,97 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+.footer {
+    background-color: $footer;
+    padding:4rem 0;
+
+    .container {
+        margin: 0rem auto;
+        color:$white;
+
+        .title {
+
+            &__name {
+                font-weight: 600;
+                font-size: 1.9rem;
+            }
+
+            &__des {
+                font-size: .8rem;
+                text-transform: uppercase;
+            }
+        }
+
+        h4 {
+            text-transform: capitalize;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        ul {
+            margin-top:3rem;
+
+            li {
+                position: relative;
+                right:2rem;
+
+                &:hover {
+                    color:$primary;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .contact {
+            ul {
+
+                li {
+    
+                    i {
+                        color:$primary;
+                        margin-right:.4rem;
+                    }
+                    &:hover {
+                        color:$white;
+                    }
+
+                    &:nth-of-type(1) {
+                        cursor: default;
+                    }
+
+                }
+            }
+        }
+
+        .row>p {
+           padding-top:1.5rem;
+        }
+
+        .row>p,ul>li {
+            color:$gray;
+            margin-top:.7rem;
+            font-size: 1.1rem;
+            text-transform: capitalize;
+        }
+
+        .social-medias {
+
+            div {
+                background-color: $primary;
+                width:2.5rem;
+                height:2.5rem;
+                margin:0rem .5rem;
+                border-radius: 50%;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            i {
+                color:$white;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
