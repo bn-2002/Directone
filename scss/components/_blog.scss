@@ -1,0 +1,81 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+.blog {
+    padding:0;
+    margin:0;
+
+    &__img {
+        position: relative;
+
+        img {
+            height:100%;
+            width: 100%;
+            object-fit: contain;
+            border-radius:.3rem .3rem 0 0;
+        }
+
+        &-info {
+            position: absolute;
+            bottom:1rem;
+            left:2rem;
+            width:80%;
+            padding:.3rem 0;
+            background-color: rgba($white,.8);
+            border-radius:.3rem;
+            height:3.5rem;
+
+            &--img {
+                height: 100%;
+                display: block;
+                padding:0 .3rem;
+
+                img {
+                    border-radius: 50%;
+                    width:3rem;
+                    object-fit:cover;
+                }
+            }
+
+        }
+
+        .heart-icon {
+            margin-right:.4rem;
+            i {
+                color:$primary;
+            }
+        }
+    }
+
+    &__des {
+
+        background-color:$white;
+        padding:1rem;
+        border-radius: 0 0 .3rem .3rem;
+
+        &>* {
+            margin:.8rem 0;
+        }
+
+        span {
+            text-transform: uppercase;
+            font-size: .9rem;
+            color:$gray;
+
+            span {
+                color:$primary;
+            }
+        }
+
+        h4 {
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        p {
+            text-transform: capitalize;
+            text-align: justify;
+            color:$gray;
+        }
+    }
+}

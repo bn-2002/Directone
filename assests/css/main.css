@@ -10557,6 +10557,71 @@ body {
   transition: 0.3s ease all;
 }
 
+.blog {
+  padding: 0;
+  margin: 0;
+}
+.blog__img {
+  position: relative;
+}
+.blog__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+.blog__img-info {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  width: 80%;
+  padding: 0.3rem 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.3rem;
+  height: 3.5rem;
+}
+.blog__img-info--img {
+  height: 100%;
+  display: block;
+  padding: 0 0.3rem;
+}
+.blog__img-info--img img {
+  border-radius: 50%;
+  width: 3rem;
+  object-fit: cover;
+}
+.blog__img .heart-icon {
+  margin-right: 0.4rem;
+}
+.blog__img .heart-icon i {
+  color: #FF414D;
+}
+.blog__des {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+.blog__des > * {
+  margin: 0.8rem 0;
+}
+.blog__des span {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #999999;
+}
+.blog__des span span {
+  color: #FF414D;
+}
+.blog__des h4 {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.blog__des p {
+  text-transform: capitalize;
+  text-align: justify;
+  color: #999999;
+}
+
 .advertisement-section {
   background: repeating-linear-gradient(120deg, #FF414D 0px, #FF414D 10px, #F03943 10px, #F03943 20px);
   margin-left: auto;

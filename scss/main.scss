@@ -20,10 +20,10 @@
 @use 'components/navbar';
 @use 'components/review-card';
 @use 'components/service';
+@use 'components/blog';
 
 //IMPORT SECTIONS
 @use 'sections/advertisement';
-@use 'sections/blog';
 @use 'sections/items-types';
 @use 'sections/lets-find-out';
 @use 'sections/testimonail';
