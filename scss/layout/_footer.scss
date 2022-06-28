@@ -3,7 +3,8 @@
 
 .footer {
     background-color: $footer;
-    padding:4rem 0;
+    padding:5rem 0;
+    position: relative;
 
     .container {
         margin: 0rem auto;
@@ -91,6 +92,24 @@
             i {
                 color:$white;
                 font-size: 1.4rem;
+            }
+        }
+    }
+
+    .copyright {
+        background-color: $copyright;
+        color:$gray;
+        position: absolute;
+        bottom: 0;
+        width:100%;
+        padding:2rem;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color:rgba($primary,.7);
+            i {
+                color:$primary;
             }
         }
     }

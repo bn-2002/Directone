@@ -10239,7 +10239,8 @@ body {
 
 .footer {
   background-color: rgb(16, 21, 28);
-  padding: 4rem 0;
+  padding: 5rem 0;
+  position: relative;
 }
 .footer .container {
   margin: 0rem auto;
@@ -10301,6 +10302,22 @@ body {
 .footer .container .social-medias i {
   color: #fff;
   font-size: 1.4rem;
+}
+.footer .copyright {
+  background-color: rgb(12, 16, 22);
+  color: #999999;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+.footer .copyright a {
+  text-decoration: none;
+  color: rgba(255, 65, 77, 0.7);
+}
+.footer .copyright a i {
+  color: #FF414D;
 }
 
 .searchbox-container {
