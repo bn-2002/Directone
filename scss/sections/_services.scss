@@ -1,0 +1,60 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.services-section {
+
+    background-color: $white;
+    position: relative; 
+    height: 100;
+
+    .service {
+        position: relative;
+        min-height:18rem !important;
+
+        .container {
+            background-color: $secondary;
+            padding:3rem 1.3rem;
+            height: 100%;
+
+            .type-icon {
+                @include type-icon;
+                margin:0 auto;
+                width:5rem;
+                height:5rem; 
+            }
+    
+            &:hover {
+                background-color: $primary;
+                .type-icon {
+                    background-color: $white;
+    
+                    svg {
+                        background-color: $white;
+                        fill:$primary;
+                    }
+                }
+
+                p {
+                    color:$white;
+                }
+            }
+
+            h5 {
+                font-size: 1.5rem;
+                margin:.5rem;
+            }
+
+            p {
+                text-align: center;
+                color: $gray;
+                font-size: 1.1rem;
+            }
+
+            .overlay {
+                height:20%;
+                width:30%;
+            }
+        }
+    }
+}

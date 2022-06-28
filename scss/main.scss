@@ -19,6 +19,7 @@
 @use 'components/button';
 @use 'components/navbar';
 @use 'components/review-card';
+@use 'components/service';
 
 //IMPORT SECTIONS
 @use 'sections/advertisement';
@@ -29,6 +30,7 @@
 @use 'sections/listing';
 @use 'sections/popular-listing';
 @use 'sections/welcome-post';
+@use 'sections/services';
 
 
 

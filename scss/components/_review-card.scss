@@ -1,5 +1,6 @@
 @use '../custom' as *;
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .review-card {
     .container {
@@ -23,20 +24,16 @@
             }
 
             .type-icon {
-                width:3rem;
-                height:3rem;
-                border-radius: 50%;
-                background-color: $primary;
-                border:2px $white solid;
                 position: absolute;
                 bottom:-1.5rem;
                 left:43%;
-    
+                width:3rem;
+                height:3rem;            
+                border:2px $white solid;
+                @include type-icon;
+
                 svg {
-                    fill:$white;
-                    background-color: $primary;
                     transform: scale(1.2);
-                    margin:0 auto;
                 }
             }
 

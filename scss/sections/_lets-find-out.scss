@@ -1,0 +1,6 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+.lets-find-out-section {
+    background-color: $black;
+}

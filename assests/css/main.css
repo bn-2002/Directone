@@ -10407,20 +10407,22 @@ body {
   transition: all ease 0.4s;
 }
 .review-card .container .image-container .type-icon {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: #FF414D;
-  border: 2px #fff solid;
   position: absolute;
   bottom: -1.5rem;
   left: 43%;
+  width: 3rem;
+  height: 3rem;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  background-color: #FF414D;
 }
 .review-card .container .image-container .type-icon svg {
   fill: #fff;
   background-color: #FF414D;
-  transform: scale(1.2);
   margin: 0 auto;
+}
+.review-card .container .image-container .type-icon svg {
+  transform: scale(1.2);
 }
 .review-card .container .image-container .zoom-in-icon {
   border-radius: 50%;
@@ -10488,6 +10490,73 @@ body {
   opacity: 1;
 }
 
+.service {
+  margin-bottom: 1.5rem;
+}
+.service .container {
+  position: relative;
+  background-color: #fff;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  transition: 1s ease all;
+  z-index: 5;
+}
+.service .container.active, .service .container:hover {
+  background-color: #FF414D;
+}
+.service .container.active svg, .service .container:hover svg {
+  fill: #fff;
+}
+.service .container.active h5, .service .container.active .item-type--title, .service .container:hover h5, .service .container:hover .item-type--title {
+  color: #fff;
+}
+.service .container.active h5 span, .service .container.active .item-type--title span, .service .container:hover h5 span, .service .container:hover .item-type--title span {
+  color: #FF414D;
+  background-color: #fff;
+}
+.service .container.active .overlay, .service .container:hover .overlay {
+  opacity: 1;
+  transition: 0.5s ease all;
+}
+.service .container h5 {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+.service .container svg {
+  transform: scale(2);
+  margin: 0 auto;
+  display: block;
+  fill: #FF414D;
+}
+.service .container .item-type--title {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #999999;
+  z-index: 4;
+}
+.service .container .item-type--title span {
+  background-color: rgba(185, 189, 194, 0.2);
+  border-radius: 5px;
+  padding: 5px;
+  color: #FF414D;
+  z-index: 4;
+}
+.service .container .overlay {
+  position: absolute;
+  content: "";
+  height: 70%;
+  width: 80%;
+  background-color: #E53A45;
+  right: 0;
+  bottom: 0;
+  border-radius: 150% 3% 0 3%;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s ease all;
+}
+
 .advertisement-section {
   background: repeating-linear-gradient(120deg, #FF414D 0px, #FF414D 10px, #F03943 10px, #F03943 20px);
   margin-left: auto;
@@ -10525,70 +10594,85 @@ body {
   margin-bottom: 1.5rem;
 }
 .item-types-section .item-type .container {
-  position: relative;
-  background-color: #fff;
-  flex-direction: column;
-  border-radius: 0.5rem;
   padding: 4rem 1.9rem;
-  height: 14rem;
-  transition: 1s ease all;
-  z-index: 5;
+  min-height: 14rem;
 }
 .item-types-section .item-type .container.active, .item-types-section .item-type .container:hover {
   cursor: pointer;
-  background-color: #FF414D;
-}
-.item-types-section .item-type .container.active svg, .item-types-section .item-type .container:hover svg {
-  fill: #fff;
-}
-.item-types-section .item-type .container.active h5, .item-types-section .item-type .container.active .item-type--title, .item-types-section .item-type .container:hover h5, .item-types-section .item-type .container:hover .item-type--title {
-  color: #fff;
-}
-.item-types-section .item-type .container.active h5 span, .item-types-section .item-type .container.active .item-type--title span, .item-types-section .item-type .container:hover h5 span, .item-types-section .item-type .container:hover .item-type--title span {
-  color: #FF414D;
-  background-color: #fff;
-}
-.item-types-section .item-type .container.active .overlay, .item-types-section .item-type .container:hover .overlay {
-  opacity: 1;
-  transition: 0.5s ease all;
-}
-.item-types-section .item-type .container h5 {
-  width: 100%;
-  text-align: center;
-  margin-top: 1rem;
-}
-.item-types-section .item-type .container svg {
-  transform: scale(2);
-  margin: 0 auto;
-  display: block;
-  fill: #FF414D;
-}
-.item-types-section .item-type .container .item-type--title {
-  width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #999999;
-  z-index: 4;
-}
-.item-types-section .item-type .container .item-type--title span {
-  background-color: rgba(185, 189, 194, 0.2);
-  border-radius: 5px;
-  padding: 5px;
-  color: #FF414D;
-  z-index: 4;
 }
 .item-types-section .item-type .container .overlay {
-  position: absolute;
-  content: "";
   height: 70%;
   width: 80%;
-  background-color: #E53A45;
-  right: 0;
-  bottom: 0;
-  border-radius: 150% 3% 0 3%;
-  z-index: -1;
-  opacity: 0;
-  transition: 0.5s ease all;
+}
+
+.lets-find-out-section {
+  background-color: #000;
+}
+
+.carousel {
+  min-height: 22rem;
+}
+.carousel .carousel-indicators {
+  z-index: 300;
+}
+.carousel .carousel-indicators li {
+  background-color: #999999;
+  border-radius: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+}
+.carousel .col-md-4 {
+  padding-bottom: 3rem;
+}
+.carousel .col-md-4 .single-box {
+  background-color: #fff;
+  padding: 1rem;
+  position: relative;
+  background-color: #fff;
+  min-height: 16rem;
+  border-radius: 0.5rem;
+  z-index: 99;
+  top: 2.2rem;
+}
+.carousel .col-md-4 .single-box .quote {
+  background-color: #FF414D;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 45%;
+  top: -2rem;
+  bottom: 2rem;
+  z-index: 100;
+}
+.carousel .col-md-4 .single-box .quote svg {
+  fill: #fff;
+  height: 2rem;
+  width: 2rem;
+}
+.carousel .col-md-4 .single-box p {
+  line-height: 2rem;
+}
+.carousel .col-md-4 .single-box .person {
+  padding: 0.5rem;
+}
+.carousel .col-md-4 .single-box .person-image {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 1rem;
+}
+.carousel .col-md-4 .single-box .person-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.carousel .col-md-4 .single-box .person-info h4 {
+  text-transform: capitalize;
+}
+.carousel .col-md-4 .single-box .person-info span {
+  text-transform: capitalize;
+  color: #FF414D;
+  font-size: 0.9rem;
 }
 
 .welcome-post-section {
@@ -10635,6 +10719,59 @@ body {
 }
 .welcome-post-section__des .container .counter .wrapper .number {
   font-size: 2.5rem;
+}
+
+.services-section {
+  background-color: #fff;
+  position: relative;
+  height: 100;
+}
+.services-section .service {
+  position: relative;
+  min-height: 18rem !important;
+}
+.services-section .service .container {
+  background-color: #F0F4F7;
+  padding: 3rem 1.3rem;
+  height: 100%;
+}
+.services-section .service .container .type-icon {
+  border-radius: 50%;
+  background-color: #FF414D;
+  margin: 0 auto;
+  width: 5rem;
+  height: 5rem;
+}
+.services-section .service .container .type-icon svg {
+  fill: #fff;
+  background-color: #FF414D;
+  margin: 0 auto;
+}
+.services-section .service .container:hover {
+  background-color: #FF414D;
+}
+.services-section .service .container:hover .type-icon {
+  background-color: #fff;
+}
+.services-section .service .container:hover .type-icon svg {
+  background-color: #fff;
+  fill: #FF414D;
+}
+.services-section .service .container:hover p {
+  color: #fff;
+}
+.services-section .service .container h5 {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+.services-section .service .container p {
+  text-align: center;
+  color: #999999;
+  font-size: 1.1rem;
+}
+.services-section .service .container .overlay {
+  height: 20%;
+  width: 30%;
 }
 
 /*# sourceMappingURL=main.css.map */

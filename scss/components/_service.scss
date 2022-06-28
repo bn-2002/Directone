@@ -1,0 +1,79 @@
+@use '../custom' as *;
+@use '../abstracts/variables' as *;
+
+.service {
+    margin-bottom: 1.5rem;
+
+    .container {
+        position: relative;
+        background-color: $white;
+        flex-direction: column;
+        border-radius: .5rem;
+        transition: 1s ease all;
+        z-index: 5;
+
+        &.active,&:hover {
+            background-color: $primary;
+
+            svg {
+                fill:$white;
+            }
+
+            h5,.item-type--title {
+                color:$white;
+                span {
+                    color:$primary;
+                    background-color: $white;
+                }
+            }
+
+            .overlay {
+                opacity: 1;
+                transition: .5s ease all;
+            }
+        }
+
+        h5 {
+            width:100%;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        svg {
+            transform: scale(2);
+            margin:0 auto;
+            display: block;
+            fill:$primary;
+        }
+
+        .item-type--title {
+            width:100%;
+            text-align: center;
+            text-transform: uppercase;
+            color:$gray;
+            z-index:4;
+
+            span {
+                background-color:rgba($light-gray,0.2);
+                border-radius: 5px;
+                padding:5px;
+                color:$primary;
+                z-index:4;
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            content:'';
+            height:70%;
+            width:80%;
+            background-color: $light-primary;
+            right:0;;
+            bottom:0;
+            border-radius:150% 3% 0 3%;
+            z-index:-1;
+            opacity: 0;
+            transition: .3s ease all;
+        }
+    }
+}
