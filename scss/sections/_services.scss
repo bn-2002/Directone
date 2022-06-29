@@ -5,8 +5,23 @@
 .services-section {
 
     background-color: $white;
-    position: relative; 
     height: 100;
+    
+    @include media-breakpoint-up(lg) {
+        padding-top:28rem;
+    };
+
+    @include media-breakpoint-down(lg) {
+        padding-top:18rem;
+    };
+
+    @include media-breakpoint-down(md) {
+        padding-top:11rem;
+    };
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 10rem;
+    };
 
     .service {
         position: relative;

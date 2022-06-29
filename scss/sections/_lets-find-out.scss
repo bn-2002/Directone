@@ -2,5 +2,84 @@
 @use '../abstracts/variables' as *;
 
 .lets-find-out-section {
-    background-color: $black;
+    background-image: url('../../images/blackbg.jpg');
+    background-size: contain;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        height:30rem;
+    };
+
+    @include media-breakpoint-down(lg) {
+        height:23rem;
+    };
+
+    @include media-breakpoint-down(md) {
+        height:19rem;
+    };
+
+    @include media-breakpoint-down(sm) {
+        height:14rem;
+    };
+
+    .video-container {
+        z-index:100;
+        position: absolute;
+        border-radius: .4rem;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            top:18rem;
+        };
+    
+        @include media-breakpoint-down(lg) {
+            top:14rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            top:10rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            top:9rem;
+        }
+
+        img {
+            width:70%;
+            height:70%;
+            object-fit: contain;
+            border-radius: .4rem;
+            z-index:100;
+            border-radius: .4rem;
+        }
+    }
+
+    .border-animation {
+        position: absolute;
+        width:4rem;
+        height:4rem;
+        border:0.5rem solid $primary;
+        border-radius: 50%;
+        top:0;
+        animation:pulse-border 1.5s linear infinite;
+    
+        &--border-1 {
+            animation-delay: 1s;
+        }
+    
+        &--border-2{
+            animation-delay: 1.5s;
+        }
+    }
+
+    .play-icon {
+        margin: 0 auto;
+        position: relative;
+        left:.7rem;
+        bottom:.1rem;
+        i {
+            font-size: 3rem;
+            color:$primary;
+        }
+    }
 }

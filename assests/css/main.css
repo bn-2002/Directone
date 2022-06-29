@@ -10103,6 +10103,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
 .display-3--des {
   color: #FF414D;
   text-transform: uppercase;
@@ -10755,7 +10765,88 @@ body {
 }
 
 .lets-find-out-section {
-  background-color: #000;
+  background-image: url("../../images/blackbg.jpg");
+  background-size: contain;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .lets-find-out-section {
+    height: 30rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .lets-find-out-section {
+    height: 23rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .lets-find-out-section {
+    height: 19rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .lets-find-out-section {
+    height: 14rem;
+  }
+}
+.lets-find-out-section .video-container {
+  z-index: 100;
+  position: absolute;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .lets-find-out-section .video-container {
+    top: 18rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .lets-find-out-section .video-container {
+    top: 14rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .lets-find-out-section .video-container {
+    top: 10rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .lets-find-out-section .video-container {
+    top: 9rem;
+  }
+}
+.lets-find-out-section .video-container img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  border-radius: 0.4rem;
+  z-index: 100;
+  border-radius: 0.4rem;
+}
+.lets-find-out-section .border-animation {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border: 0.5rem solid #FF414D;
+  border-radius: 50%;
+  top: 0;
+  animation: pulse-border 1.5s linear infinite;
+}
+.lets-find-out-section .border-animation--border-1 {
+  animation-delay: 1s;
+}
+.lets-find-out-section .border-animation--border-2 {
+  animation-delay: 1.5s;
+}
+.lets-find-out-section .play-icon {
+  margin: 0 auto;
+  position: relative;
+  left: 0.7rem;
+  bottom: 0.1rem;
+}
+.lets-find-out-section .play-icon i {
+  font-size: 3rem;
+  color: #FF414D;
 }
 
 .carousel {
@@ -10872,8 +10963,27 @@ body {
 
 .services-section {
   background-color: #fff;
-  position: relative;
   height: 100;
+}
+@media (min-width: 992px) {
+  .services-section {
+    padding-top: 28rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .services-section {
+    padding-top: 18rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .services-section {
+    padding-top: 11rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .services-section {
+    padding-top: 10rem;
+  }
 }
 .services-section .service {
   position: relative;
